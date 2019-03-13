@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Resistor calculator</title>
 		<meta name="description" content="You can calculate the resistor value on this website." />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="keywords" content="resistor, calculator, bands" />
 		<link rel="stylesheet" href="index.css" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -12,112 +13,113 @@
 	</head>
   
 	<body>
-		<h1>Resistor
-		<div id="title"> color code </div>
-		calculator 
-		</h1>
-		<div id="result">Resistor value: <span>2.2kΩ | Tolerance: 2%</span> </div>
-	  
-		<div id="bands">
-			<div id="firstBand">
-				<div id="firstBandTop" class="band"> </div>
-				<div id="firstBandBottom" class="band"> </div>
+		<div id="container">
+			<h1>Resistor
+			<div id="title"> color code </div>
+			calculator 
+			</h1>
+			<div id="result">Resistor value: <span>2.2kΩ | Tolerance: 2%</span> </div>
+		  
+			<div id="bands">
+				<div id="firstBand">
+					<div id="firstBandTop" class="band"> </div>
+					<div id="firstBandBottom" class="band"> </div>
+				</div>
+				<div id="secondBand">
+					<div id="secondBandTop" class="band"> </div>
+					<div id="secondBandBottom" class="band"> </div>
+				</div>
+				<div id="thirdBand">
+					<div id="thirdBandTop" class="band"> </div>
+					<div id="thirdBandBottom" class="band"> </div>
+				</div>
+				<div id="fourthBand">
+					<div id="fourthBandTop" class="band"> </div>
+					<div id="fourthBandBottom" class="band"> </div>
+				</div>
 			</div>
-			<div id="secondBand">
-				<div id="secondBandTop" class="band"> </div>
-				<div id="secondBandBottom" class="band"> </div>
-			</div>
-			<div id="thirdBand">
-				<div id="thirdBandTop" class="band"> </div>
-				<div id="thirdBandBottom" class="band"> </div>
-			</div>
-			<div id="fourthBand">
-				<div id="fourthBandTop" class="band"> </div>
-				<div id="fourthBandBottom" class="band"> </div>
+		  
+			<div id="content">
+				<div id="selections">
+					<div class="colorSelection">
+						<label for="first">1st band</label>
+						<select id="firstColor" class="dropdown" >
+							<option selected disabled>Select the color</option>
+							<option>brown</option>
+							<option>red</option>
+							<option>orange</option>
+							<option>yellow</option>
+							<option>green</option>
+							<option>blue</option>
+							<option>purple</option>
+							<option>gray</option>
+							<option>white</option>
+						</select>
+					</div>
+			
+					<div class="colorSelection">
+						<label for="second">2nd band</label>
+						<select id="secondColor" class="dropdown" >
+							<option selected disabled>Select the color</option>
+							<option>black</option>
+							<option>brown</option>
+							<option>red</option>
+							<option>orange</option>
+							<option>yellow</option>
+							<option>green</option>
+							<option>blue</option>
+							<option>purple</option>
+							<option>gray</option>
+							<option>white</option>
+						</select>
+					</div>
+		
+					<div class="colorSelection">
+						<label for="third">3rd band</label>
+						<select id="thirdColor" class="dropdown" >
+							<option selected disabled>Select the color</option>
+							<option>silver</option>
+							<option>gold</option>
+							<option>black</option>
+							<option>brown</option>
+							<option>red</option>
+							<option>orange</option>
+							<option>yellow</option>
+							<option>green</option>
+							<option>blue</option>
+							<option>purple</option>
+							<option>gray</option>
+							<option>white</option>
+						</select>
+					</div>
+			
+					<div class="colorSelection">
+						<label for="fourth">4th band</label>
+						<select id="fourthColor" class="dropdown" >
+							<option selected disabled>Select the color</option>
+							<option>no band</option>
+							<option>silver</option>
+							<option>gold</option>
+							<option>black</option>
+							<option>brown</option>
+							<option>red</option>
+							<option>orange</option>
+							<option>gold</option>
+							<option>green</option>
+							<option>blue</option>
+							<option>purple</option>
+							<option>gray</option>
+							<option>white</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="button">
+					<button>Show the resistor value</button>
+				</div>
+			
 			</div>
 		</div>
-	  
-		<fieldset>
-			<div id="selections">
-				<div class="colorSelection">
-					<label for="first">1st band</label>
-					<select id="firstColor" class="soflow" >
-						<option selected disabled>Select the color</option>
-						<option>brown</option>
-						<option>red</option>
-						<option>orange</option>
-						<option>yellow</option>
-						<option>green</option>
-						<option>blue</option>
-						<option>purple</option>
-						<option>gray</option>
-						<option>white</option>
-					</select>
-				</div>
-		
-				<div class="colorSelection">
-					<label for="second">2nd band</label>
-					<select id="secondColor" class="soflow" >
-						<option selected disabled>Select the color</option>
-						<option>black</option>
-						<option>brown</option>
-						<option>brown</option>
-						<option>red</option>
-						<option>yellow</option>
-						<option>green</option>
-						<option>blue</option>
-						<option>purple</option>
-						<option>gray</option>
-						<option>white</option>
-					</select>
-				</div>
-	
-				<div class="colorSelection">
-					<label for="third">3rd band</label>
-					<select id="thirdColor" class="soflow" >
-						<option selected disabled>Select the color</option>
-						<option>silver</option>
-						<option>gold</option>
-						<option>black</option>
-						<option>brown</option>
-						<option>red</option>
-						<option>orange</option>
-						<option>yellow</option>
-						<option>green</option>
-						<option>blue</option>
-						<option>purple</option>
-						<option>gray</option>
-						<option>white</option>
-					</select>
-				</div>
-		
-				<div class="colorSelection">
-					<label for="fourth">4th band</label>
-					<select id="fourthColor" class="soflow" >
-						<option selected disabled>Select the color</option>
-						<option>no band</option>
-						<option>silver</option>
-						<option>gold</option>
-						<option>black</option>
-						<option>brown</option>
-						<option>red</option>
-						<option>orange</option>
-						<option>gold</option>
-						<option>green</option>
-						<option>blue</option>
-						<option>purple</option>
-						<option>gray</option>
-						<option>white</option>
-					</select>
-				</div>
-			</div>
-
-			<div id="button">
-				<button>Show the resistor value</button>
-			</div>
-		
-		</fieldset>
-		
 		<script src="index.js"> </script>
 	</body>
 </html>

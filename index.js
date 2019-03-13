@@ -66,7 +66,7 @@ var bands=[
 			{name: "white",
 			color: "rgb(255, 255, 255)",
 			number: 9,
-			tolerancja: "-"}
+			tolerance: "-"}
 		   ];
 
 firstColor.addEventListener("change", function(){
@@ -111,6 +111,6 @@ fourthColor.addEventListener("change", function(){
 
 function showResult(){
 	var numbers = String(firstResult)+String(secondResult);
-	return result.innerHTML=(numbers*Math.pow(10, thirdResult))/1000+ "k&#937 "+"Tolerance: " +fourthResult+"%";
+	return result.innerHTML=numbers*Math.pow(10, thirdResult)/1000+ "k&#937 "+"Tolerance: " +fourthResult+"%";
 }
 
